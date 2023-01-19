@@ -1,0 +1,40 @@
+.bdy {
+    background-image: url("../../../assets/image/bk1.png");
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card{
+   margin-top: 30%;
+    margin-left: 105%;
+    border: none;
+    width: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1) 100%);
+}
+
+.footerTop{
+    margin-top: -5.5%;
+}
+
+.logincolor{
+    color: white;
+   
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logindetails{
+    font-weight: bold;
+    margin-top: 30%;
+    margin-left: 25%;
+    font-size: 30px;
+  }

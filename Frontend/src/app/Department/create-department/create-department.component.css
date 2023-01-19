@@ -1,0 +1,40 @@
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  .cardposition{
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%
+  }
+
+  .fieldsBottom{
+    margin-bottom: 1%;
+  }
+
+  .validationColor{
+    color: red;
+  }
+
+  .nav {
+    background-color: #212121;
+  }
+  .title {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+      "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: 35px;
+    color: white;
+  }
+
+  .deptcard{
+    opacity: 90%;
+  }
+
+  .deptback{
+    background-image: url("../../../assets//image/departback.jpg");
+    padding-top: 1%;
+    padding-bottom: 0.1%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

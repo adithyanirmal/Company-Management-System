@@ -1,0 +1,171 @@
+
+<nav class="navbar nav navbar-expand-lg">
+    <div class="container-fluid">
+      <a href="home">
+        <i style="color: white;" class="fa fa-home fa-2x">Home</i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+        </ul>
+        <li class="nav-item" style="margin-left: 32.5%;">
+          <a class="title" aria-current="page" >Employee Information</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <div class="empback">
+<div class="card cardposition empcard" style="width: 65rem; ">
+    <div class="card-body">
+      <h5 class="card-title badge text-dark opacity-90 fs-3 center">Edit Employee Details</h5>
+      <div class="container">
+            <br>
+            <h4>Personal Information</h4>
+
+            <!-- <div class="form-group fieldsBottom">
+                <label for="dCategory">Department Category</label>
+                <select formControlName="dCategory" [ngClass]="{ 'is-invalid':submitted && f.dCategory.errors}"
+                    class="form-control">
+                    <option>Technology</option>
+                    <option>Management</option>
+                </select>
+                <div *ngIf="submitted && f.dCategory.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dCategory.errors.required" class="validationColor">Department Category is required</div>
+                </div>
+            </div> -->
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="name">Employee Name</label>
+                <input type="text" [(ngModel)]="employee.name" 
+                    class="form-control" placeholder="Enter Employee Name">
+                <!-- <div *ngIf="submitted && f.name.errors" class="Invalid-feedback">
+                    <div *ngIf="f.name.errors.required" class="validationColor">Employee Name is required</div>
+                </div> -->
+    
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="nic">NIC</label>
+                <input type="number"[(ngModel)]="employee.nic"
+                    class="form-control" placeholder="Enter NIC">
+                <!-- <div *ngIf="submitted && f.nic.errors" class="Invalid-feedback">
+                    <div *ngIf="f.nic.errors.required" class="validationColor">NIC is required</div>
+                </div> -->
+            </div>
+
+                 <div class="form-group fieldsBottom">
+                <label for="gender">Select Gender</label>
+                <select [(ngModel)]="employee.gender"
+                    class="form-control">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <!-- <div *ngIf="submitted && f.gender.errors" class="Invalid-feedback">
+                    <div *ngIf="f.gender.errors.required" class="validationColor">Gender is required</div>
+                </div> -->
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="contactNo">Contact Number</label>
+                <input type="number" [(ngModel)]="employee.contactNo" 
+                    class="form-control" placeholder="Enter Contact Number">
+                <!-- <div *ngIf="submitted && f.contactNo.errors" class="Invalid-feedback">
+                    <div *ngIf="f.contactNo.errors.required" class="validationColor">Contact Number is required</div>
+                </div> -->
+            </div>
+    
+
+            <div class="form-group fieldsBottom">
+                <label for="email">Email</label>
+                <input type="email" [(ngModel)]="employee.email"
+                    class="form-control" placeholder="Enter Email">
+                <!-- <div *ngIf="submitted && f.email.errors" class="Invalid-feedback">
+                    <div *ngIf="f.email.errors.required" class="validationColor">Email is required</div>
+                </div> -->
+            </div>
+
+
+            <br>
+            <h4>Employment Details</h4>
+            <div class="form-group fieldsBottom">
+                <label for="empId">Employee ID</label>
+                <input type="text" [(ngModel)]="employee.empId" 
+                    class="form-control" placeholder="Enter Employee ID">
+                <!-- <div *ngIf="submitted && f.empId.errors" class="Invalid-feedback">
+                    <div *ngIf="f.empId.errors.required" class="validationColor">Employee ID is required</div>
+                </div> -->
+            </div>
+
+
+            <div class="form-group fieldsBottom">
+                <label for="joinDate">Join Date</label>
+                <input type="date" [(ngModel)]="employee.joinDate" 
+                    class="form-control" placeholder="Enter Join Date">
+                <!-- <div *ngIf="submitted && f.joinDate.errors" class="Invalid-feedback">
+                    <div *ngIf="f.joinDate.errors.required" class="validationColor">Join Date is required</div>
+                </div> -->
+            </div>
+
+
+            <div class="form-group fieldsBottom">
+                <label for="dueDate">Due Date</label>
+                <input type="date" [(ngModel)]="employee.dueDate" 
+                    class="form-control" placeholder="Enter Due Date">
+                <!-- <div *ngIf="submitted && f.dueDate.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dueDate.errors.required" class="validationColor">Due Date is required</div>
+                </div> -->
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="dept">Department</label>
+                <select [(ngModel)]="employee.dept" 
+                    class="form-control">
+                    <option> Intelligent Automation</option>
+                    <option>HR Department</option>
+                    <option>Financial Department</option>
+                    <option>Network Department</option>
+                    <option>Cyber Security Department</option>
+                    <option>Software Department</option>
+                    <option>QA Department</option>
+                    <option>SAP Department</option>
+                    <option>ussiness Intelligent Department</option>
+                    <option>Bussiness Analyst Department</option>
+                </select>
+                <!-- <div *ngIf="submitted && f.dept.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dept.errors.required" class="validationColor">Department is required</div>
+                </div> -->
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="designation">Designation</label>
+                <select [(ngModel)]="employee.designation" 
+                    class="form-control">
+                    <option>Permenent Employee</option>
+                    <option>Contract-Based Employee</option>
+                    <option>Intern</option>
+                </select>
+                <!-- <div *ngIf="submitted && f.designation.errors" class="Invalid-feedback">
+                    <div *ngIf="f.designation.errors.required" class="validationColor">Designation is required</div>
+                </div> -->
+            </div>
+           
+    
+    
+            <br>
+            <div class="form-group center">
+                <button class="btn btn-success" (click)="updateData()">Submit</button>
+    
+            </div>
+
+    </div>
+    
+      
+    </div>
+  </div>
+</div>

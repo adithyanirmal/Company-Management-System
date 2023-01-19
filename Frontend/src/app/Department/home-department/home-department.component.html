@@ -1,0 +1,80 @@
+<div>
+          <nav class="navbar nav navbar-expand-lg">
+            <div class="container-fluid">
+              <a href="home">
+                <i style="color: white;" class="fa fa-home fa-2x">Home</i>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+
+                </ul>
+                <li class="nav-item" style="margin-left: 32.5%;">
+                  <a class="title" aria-current="page" >Department Information</a>
+                </li>
+              </div>
+            </div>
+          </nav>
+    <br><br>
+    <div class="center">
+        <h1>
+          <span
+            class="badge text-dark opacity-90 fs-3">
+            All Department Information
+          </span>
+        </h1>
+      </div>
+      <br>
+      <table class="table ">
+        <thead class="table-info">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Department Category</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">No of Teams</th>
+            <th scope="col">Department Head Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">Updated Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let department of departments; let i = index">
+              <th>{{i + 1}}</th>
+              <td>{{department.dCategory}}</td>
+              <td>{{department.dName}}</td>
+              <td>{{department.dEmail}}</td>
+              <td>{{department.dTeams}}</td>
+              <td>{{department.hName}}</td>
+              <td>{{department.hEmail}}</td>
+              <td>{{department.hNo}}</td>
+              <td>{{department.uDate}}</td>
+              <td>
+                <!-- <button class="btn btn-primary" routerLink="">EDIT</button>
+                <button class="btn btn-danger" (click)="deleteData(patient._id)">DELETE</button> -->
+                <a class="btn btn-warning text-dark"  href="edit-department/{{department._id}}"><i class="fas fa-edit"></i>&nbsp;Edit</a>
+                      &nbsp; &nbsp;
+                <a class="btn btn-danger text-dark "(click)="deleteData(department._id)">
+                  <i class="far fa-trash-alt"></i>&nbsp;Delete
+                </a>
+            </td>
+            </tr>
+         
+        </tbody>
+      </table>
+    
+      
+      <div class="center buttonBottom">
+        <a class="btn btn-success" href="create-department">
+          Add Department Information
+        </a>
+      </div>
+    
+    
+    </div>
+    

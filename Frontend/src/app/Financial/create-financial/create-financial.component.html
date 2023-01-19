@@ -1,0 +1,138 @@
+
+<nav class="navbar nav navbar-expand-lg">
+    <div class="container-fluid">
+      <a href="home">
+        <i style="color: white;" class="fa fa-home fa-2x">Home</i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+        </ul>
+        <li class="nav-item" style="margin-left: 32.5%;">
+          <a class="title" aria-current="page" >Finance Information</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <div class="finback">
+<div class="card cardposition fincard" style="width: 65rem; ">
+    <div class="card-body">
+      <h5 class="card-title badge text-dark opacity-90 fs-3 center">Create A New Finance</h5>
+      <div class="container">
+        <form (ngSubmit)="insertDataF()" [formGroup]="form">
+
+            <!-- <div class="form-group fieldsBottom">
+                <label for="dCategory">Department Category</label>
+                <select formControlName="dCategory" [ngClass]="{ 'is-invalid':submitted && f.dCategory.errors}"
+                    class="form-control">
+                    <option>Technology</option>
+                    <option>Management</option>
+                </select>
+                <div *ngIf="submitted && f.dCategory.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dCategory.errors.required" class="validationColor">Department Category is required</div>
+                </div>
+            </div> -->
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="fId">Financial Id</label>
+                <input type="text" formControlName="fId" [ngClass]="{ 'is-invalid':submitted && f.fId.errors}"
+                    class="form-control" placeholder="Enter Financial Id">
+                <div *ngIf="submitted && f.fId.errors" class="Invalid-feedback">
+                    <div *ngIf="f.fId.errors.required" class="validationColor">Financial Id is required</div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="month">Month</label>
+                <input type="text" formControlName="month" [ngClass]="{ 'is-invalid':submitted && f.month.errors}"
+                    class="form-control" placeholder="Enter Month">
+                <div *ngIf="submitted && f.month.errors" class="Invalid-feedback">
+                    <div *ngIf="f.month.errors.required" class="validationColor">Month is required</div>
+                </div>
+            </div>
+
+                 <!-- <div class="form-group fieldsBottom">
+                <label for="gender">Total Income</label>
+                <select formControlName="gender" [ngClass]="{ 'is-invalid':submitted && f.gender.errors}"
+                    class="form-control">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <div *ngIf="submitted && f.gender.errors" class="Invalid-feedback">
+                    <div *ngIf="f.gender.errors.required" class="validationColor">Gender is required</div>
+                </div>
+            </div> -->
+    
+            <div class="form-group fieldsBottom">
+                <label for="tincome">Total Income</label>
+                <input type="number"  formControlName="tincome" [ngClass]="{ 'is-invalid':submitted && f.tincome.errors}"
+                    class="form-control" placeholder="Enter Total Income (Rs:)">
+                <div *ngIf="submitted && f.tincome.errors" class="Invalid-feedback">
+                    <div *ngIf="f.tincome.errors.required" class="validationColor">Total Income is required</div>
+                </div>
+            </div>
+    
+
+            <div class="form-group fieldsBottom">
+                <label for="toutcome">Total Outcome</label>
+                <input type="number" formControlName="toutcome" [ngClass]="{ 'is-invalid':submitted && f.toutcome.errors}"
+                    class="form-control" placeholder="Enter Total Outcome (Rs:)">
+                <div *ngIf="submitted && f.toutcome.errors" class="Invalid-feedback">
+                    <div *ngIf="f.toutcome.errors.required" class="validationColor">Total Outcome is required</div>
+                </div>
+            </div>
+
+                  <div class="form-group fieldsBottom">
+                <label for="status">Status</label>
+                <select formControlName="status" [ngClass]="{ 'is-invalid':submitted && f.status.errors}"
+                    class="form-control">
+                    <option>Profit</option>
+                    <option>Loss</option>
+                </select>
+                <div *ngIf="submitted && f.status.errors" class="Invalid-feedback">
+                    <div *ngIf="f.status.errors.required" class="validationColor">Status is required</div>
+                </div>
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="proloss">Profit or Loss</label>
+                <input  type="number" formControlName="proloss" [ngClass]="{ 'is-invalid':submitted && f.proloss.errors}"
+                    class="form-control" placeholder="Profit or Loss (Rs:)">
+                <div *ngIf="submitted && f.proloss.errors" class="Invalid-feedback">
+                    <div *ngIf="f.proloss.errors.required" class="validationColor">Profit or Loss is required</div>
+                </div>
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="review">Review</label>
+                <textarea type="text" formControlName="review" [ngClass]="{ 'is-invalid':submitted && f.review.errors}"
+                    class="form-control" placeholder="Enter Review"></textarea>
+                <div *ngIf="submitted && f.review.errors" class="Invalid-feedback">
+                    <div *ngIf="f.review.errors.required" class="validationColor">Review is required</div>
+                </div>
+            </div>
+            
+
+
+           
+    
+    
+            <br>
+            <div class="form-group center">
+                <button class="btn btn-success">Submit</button>
+    
+            </div>
+        </form>
+    </div>
+    
+      
+    </div>
+  </div>
+</div>

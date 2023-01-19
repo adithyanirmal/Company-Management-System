@@ -1,0 +1,157 @@
+<nav class="navbar nav navbar-expand-lg">
+    <div class="container-fluid">
+      <a href="home">
+        <i style="color: white;" class="fa fa-home fa-2x">Home</i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+        </ul>
+        <li class="nav-item" style="margin-left: 32.5%;">
+          <a class="title" aria-current="page" >Project Information</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <div class="proback">
+<div class="card cardposition procard" style="width: 65rem; ">
+    <div class="card-body">
+      <h5 class="card-title badge text-dark opacity-90 fs-3 center">Create A New Project</h5>
+      <div class="container">
+        <form (ngSubmit)="insertDataPP()" [formGroup]="form">
+            <br>
+            <h4>Client Information</h4>
+
+            <!-- <div class="form-group fieldsBottom">
+                <label for="dCategory">Department Category</label>
+                <select formControlName="dCategory" [ngClass]="{ 'is-invalid':submitted && f.dCategory.errors}"
+                    class="form-control">
+                    <option>Technology</option>
+                    <option>Management</option>
+                </select>
+                <div *ngIf="submitted && f.dCategory.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dCategory.errors.required" class="validationColor">Department Category is required</div>
+                </div>
+            </div> -->
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="cName">Client Name</label>
+                <input type="text" formControlName="cName" [ngClass]="{ 'is-invalid':submitted && f.cName.errors}"
+                    class="form-control" placeholder="Enter Client Name">
+                <div *ngIf="submitted && f.cName.errors" class="Invalid-feedback">
+                    <div *ngIf="f.cName.errors.required" class="validationColor">Client Name is required</div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="email">Email</label>
+                <input type="email" formControlName="email" [ngClass]="{ 'is-invalid':submitted && f.email.errors}"
+                    class="form-control" placeholder="Enter Email">
+                <div *ngIf="submitted && f.email.errors" class="Invalid-feedback">
+                    <div *ngIf="f.email.errors.required" class="validationColor">Email is required</div>
+                </div>
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="contactNo">Contact Number</label>
+                <input type="number" formControlName="contactNo" [ngClass]="{ 'is-invalid':submitted && f.contactNo.errors}"
+                    class="form-control" placeholder="Enter Contact Number">
+                <div *ngIf="submitted && f.contactNo.errors" class="Invalid-feedback">
+                    <div *ngIf="f.contactNo.errors.required" class="validationColor">Contact Number is required</div>
+                </div>
+            </div>
+    
+
+            <br>
+            <h4>Project Information</h4>
+            <div class="form-group fieldsBottom">
+                <label for="projectId">Project ID</label>
+                <input type="text" formControlName="projectId" [ngClass]="{ 'is-invalid':submitted && f.projectId.errors}"
+                    class="form-control" placeholder="Enter Project ID">
+                <div *ngIf="submitted && f.projectId.errors" class="Invalid-feedback">
+                    <div *ngIf="f.projectId.errors.required" class="validationColor">Project ID is required</div>
+                </div>
+            </div>
+            <div class="form-group fieldsBottom">
+                <label for="description">Project Description</label>
+                <textarea type="text" formControlName="description" [ngClass]="{ 'is-invalid':submitted && f.description.errors}"
+                    class="form-control" placeholder="Enter Project Description"></textarea>
+                <div *ngIf="submitted && f.description.errors" class="Invalid-feedback">
+                    <div *ngIf="f.description.errors.required" class="validationColor">Project Description is required</div>
+                </div>
+            </div>
+
+               <div class="form-group fieldsBottom">
+                <label for="dept">Assign To</label>
+                <select formControlName="dept" [ngClass]="{ 'is-invalid':submitted && f.dept.errors}"
+                    class="form-control">
+                    <option> Intelligent Automation</option>
+                    <option>Network Department</option>
+                    <option>Cyber Security Department</option>
+                    <option>Software Department</option>
+                    <option>SAP Department</option>
+                    <option>Bussiness Intelligent Department</option>
+                    <option>Bussiness Analyst Department</option>
+                </select>
+                <div *ngIf="submitted && f.dept.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dept.errors.required" class="validationColor">Department Category is required</div>
+                </div>
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="pLevel">Priority Level</label>
+                <input type="number" formControlName="pLevel" [ngClass]="{ 'is-invalid':submitted && f.pLevel.errors}"
+                    class="form-control" placeholder="(1-5)">
+                <div *ngIf="submitted && f.pLevel.errors" class="Invalid-feedback">
+                    <div *ngIf="f.pLevel.errors.required" class="validationColor">Priority Level is required</div>
+                </div>
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="sDate">Start Date</label>
+                <input type="date" formControlName="sDate" [ngClass]="{ 'is-invalid':submitted && f.sDate.errors}"
+                    class="form-control" placeholder="Select Start Date">
+                <div *ngIf="submitted && f.sDate.errors" class="Invalid-feedback">
+                    <div *ngIf="f.sDate.errors.required" class="validationColor">Start Date is required</div>
+                </div>
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="eDate">End Date</label>
+                <input type="date" formControlName="eDate" [ngClass]="{ 'is-invalid':submitted && f.eDate.errors}"
+                    class="form-control" placeholder="Select End Date">
+                <div *ngIf="submitted && f.eDate.errors" class="Invalid-feedback">
+                    <div *ngIf="f.eDate.errors.required" class="validationColor">End Date is required</div>
+                </div>
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="remarks">Remarks</label>
+                <textarea type="text" formControlName="remarks" [ngClass]="{ 'is-invalid':submitted && f.remarks.errors}"
+                    class="form-control" placeholder="Enter Remarks"></textarea>
+                <div *ngIf="submitted && f.remarks.errors" class="Invalid-feedback">
+                    <div *ngIf="f.remarks.errors.required" class="validationColor">Remarks is required</div>
+                </div>
+            </div>
+           
+    
+    
+            <br>
+            <div class="form-group center">
+                <button class="btn btn-success">Submit</button>
+    
+            </div>
+        </form>
+    </div>
+    
+      
+    </div>
+  </div>
+</div>

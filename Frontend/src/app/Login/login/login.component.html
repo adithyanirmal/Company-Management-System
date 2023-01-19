@@ -1,0 +1,30 @@
+<div class="bdy">
+    <div class="col-md-6">
+          <div class="card">
+              <div class="text-center">
+                  <h1 class="logincolor">Login</h1>
+                  <h6 >Please Enter Email & Password</h6>
+              </div>
+              <form >
+                  <div class="mb-3 logincolor">
+                    <label for="email" class="form-label" >Email address</label>
+                    <input type="email" placeholder="Enter Email" name="email" [(ngModel)]="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                    
+                  </div>
+      
+      
+                  <div class="mb-3 logincolor">
+                    <label  class="form-label">Password</label>
+                    <input [(ngModel)]="pass" placeholder="Enter Password" name="pass" type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+      
+      
+                  <br>
+                  <a type="submit" class="btn btn-primary center" (click)="login()">Login</a>
+                </form>
+              
+      
+          </div>
+      </div>
+<br><br><br>
+</div>

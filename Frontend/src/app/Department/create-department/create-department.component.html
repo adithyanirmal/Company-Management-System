@@ -1,0 +1,120 @@
+<nav class="navbar nav navbar-expand-lg">
+    <div class="container-fluid">
+      <a href="home">
+        <i style="color: white;" class="fa fa-home fa-2x">Home</i>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+        </ul>
+        <li class="nav-item" style="margin-left: 32.5%;">
+          <a class="title" aria-current="page" >Department Information</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <div class="deptback">
+<div class="card cardposition deptcard" style="width: 65rem; ">
+    <div class="card-body">
+      <h5 class="card-title badge text-dark opacity-90 fs-3 center">Create A New Department</h5>
+      <div class="container">
+        <form (ngSubmit)="insertDataD()" [formGroup]="form">
+            <br>
+            <h4>Department Information</h4>
+
+            <div class="form-group fieldsBottom">
+                <label for="dCategory">Department Category</label>
+                <select formControlName="dCategory" [ngClass]="{ 'is-invalid':submitted && f.dCategory.errors}"
+                    class="form-control">
+                    <option>Technology</option>
+                    <option>Management</option>
+                </select>
+                <div *ngIf="submitted && f.dCategory.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dCategory.errors.required" class="validationColor">Department Category is required</div>
+                </div>
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="dName">Department Name</label>
+                <input type="text" formControlName="dName" [ngClass]="{ 'is-invalid':submitted && f.dName.errors}"
+                    class="form-control" placeholder="Enter Department Name">
+                <div *ngIf="submitted && f.dName.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dName.errors.required" class="validationColor">Department Name is required</div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="dEmail">Department Email</label>
+                <input type="email" formControlName="dEmail" [ngClass]="{ 'is-invalid':submitted && f.dEmail.errors}"
+                    class="form-control" placeholder="Enter Department Email">
+                <div *ngIf="submitted && f.dEmail.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dEmail.errors.required" class="validationColor">Department Email is required</div>
+                </div>
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="dTeams">No of Teams</label>
+                <input type="number" formControlName="dTeams" [ngClass]="{ 'is-invalid':submitted && f.dTeams.errors}"
+                    class="form-control" placeholder="(1-10)">
+                <div *ngIf="submitted && f.dTeams.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dTeams.errors.required" class="validationColor">No of Teams is required</div>
+                </div>
+            </div>
+    
+
+            <br>
+            <h4>Department Head Information</h4>
+            <div class="form-group fieldsBottom">
+                <label for="hName">Department Head Name</label>
+                <input type="text" formControlName="hName" [ngClass]="{ 'is-invalid':submitted && f.hName.errors}"
+                    class="form-control" placeholder="Enter Department Head Name">
+                <div *ngIf="submitted && f.hName.errors" class="Invalid-feedback">
+                    <div *ngIf="f.hName.errors.required" class="validationColor">Department Head Name is required</div>
+                </div>
+            </div>
+            <div class="form-group fieldsBottom">
+                <label for="hEmail">Personal Email</label>
+                <input type="email" formControlName="hEmail" [ngClass]="{ 'is-invalid':submitted && f.hEmail.errors}"
+                    class="form-control" placeholder="Enter Personal Email">
+                <div *ngIf="submitted && f.hEmail.errors" class="Invalid-feedback">
+                    <div *ngIf="f.hEmail.errors.required" class="validationColor">Personal Email is required</div>
+                </div>
+            </div>
+            <div class="form-group fieldsBottom">
+                <label for="hNo">Contact Number</label>
+                <input type="number" formControlName="hNo" [ngClass]="{ 'is-invalid':submitted && f.hNo.errors}"
+                    class="form-control" placeholder="Enter Contact Number">
+                <div *ngIf="submitted && f.hNo.errors" class="Invalid-feedback">
+                    <div *ngIf="f.hNo.errors.required" class="validationColor">Contact Number is required</div>
+                </div>
+            </div>
+            <div class="form-group fieldsBottom">
+                <label for="uDate">Updated Date</label>
+                <input type="date" formControlName="uDate" [ngClass]="{ 'is-invalid':submitted && f.uDate.errors}"
+                    class="form-control" placeholder="Enter Updated Date">
+                <div *ngIf="submitted && f.uDate.errors" class="Invalid-feedback">
+                    <div *ngIf="f.uDate.errors.required" class="validationColor">Updated Date is required</div>
+                </div>
+            </div>
+           
+    
+    
+            <br>
+            <div class="form-group center">
+                <button class="btn btn-success">Submit</button>
+    
+            </div>
+        </form>
+    </div>
+    
+      
+    </div>
+  </div>
+</div>

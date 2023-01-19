@@ -1,0 +1,5 @@
+{
+    "mongoURI": "mongodb+srv://Adithya:adi123456@cluster0.bfqzam2.mongodb.net/?retryWrites=true&w=majority",
+    "secretOrKey": "secret"
+}
+

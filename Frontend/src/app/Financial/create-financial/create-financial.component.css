@@ -1,0 +1,39 @@
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  .cardposition{
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%
+  }
+
+  .fieldsBottom{
+    margin-bottom: 1%;
+  }
+
+  .validationColor{
+    color: red;
+  }
+
+  .nav {
+    background-color: #212121;
+  }
+  .title {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+      "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: 35px;
+    color: white;
+  }
+
+  .fincard{
+    opacity: 90%;
+  }
+  .finback{
+    background-image: url("../../../assets//image/finback.jpg");
+    padding-top: 1%;
+    padding-bottom: 0.1%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
